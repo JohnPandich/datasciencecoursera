@@ -1,3 +1,4 @@
+# This function creates a special "vector" object that can cache its inverse.
 makeVector <- function(x = numeric()) {
   m <- NULL
   set <- function(y) {
@@ -12,6 +13,9 @@ makeVector <- function(x = numeric()) {
        getmean = getmean)
 }
 
+
+# This function computes the mean of the special "vector" returned by makeVector above. 
+# If the mean has already been calculated (and the vactor has not changed), then the cachemean should retrieve the mean from the cache.
 cachemean <- function(x, ...) {
   m <- x$getmean()
   if(!is.null(m)) {
@@ -24,6 +28,8 @@ cachemean <- function(x, ...) {
   m
 }
 
+
+# This function creates a special "matrix" object that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
   
   s <- NULL
@@ -42,6 +48,9 @@ makeCacheMatrix <- function(x = matrix()) {
        getsolve = getsolve)
 }
 
+
+# This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
+# If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache.
 cacheSolve <- function(x, ...) {
   
   s <- x$getsolve()
