@@ -24,7 +24,7 @@ cachemean <- function(x, ...) {
   m
 }
 
-makeCacheMatrix <- function(x = numeric()) {
+makeCacheMatrix <- function(x = matrix()) {
   
   s <- NULL
   
