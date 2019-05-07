@@ -21,12 +21,9 @@ Execute the code in the top level directory of the folder.
 
 # Codebook
 
-activityLabels = read.table("./activity_labels.txt")[,2]
-variableLabels = read.table("./features.txt")[,2]
-
-
-# Read test data
-* testData Used to store X_test.txt data for grooming and is then aggrigated with testY and testSubject
+* activityLabels - Used to store an array of activity labels from activity_labels.txt
+* variableLabels - Used to store an array of feature labels from features.txt
+* testData - Used to store X_test.txt data for grooming and is then aggrigated with testY and testSubject
 * testY - Used to store y_test.txt data for grooming
 * testSubject - Used to store subject_test.txt data for grooming
 * trainData Used to store X_train.txt data for grooming and is then aggrigated with trainY and trainSubject
